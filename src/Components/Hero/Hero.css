@@ -1,0 +1,34 @@
+.custom-shape-divider-bottom-1716725832 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1716725832 svg {
+    position: relative;
+    display: block;
+    width: calc(203% + 1.3px);
+    height: 98px;
+}
+
+.custom-shape-divider-bottom-1716725832 .shape-fill {
+    fill: #000000;
+}
+
+.custom-transform {
+    @apply transform;
+    transform: scale(3.2) translate(-50px, -93px) rotate(44deg);
+  }
+
+  /* .custom-select {
+    padding-right: 2.5rem; 
+  } */
+  
+  .custom-arrow svg {
+    height: 1.5rem; /* Increase the size of the arrow */
+    width: 1.5rem;
+    fill: white; /* Make the arrow white */
+  }
