@@ -13,10 +13,10 @@ const TopBar = () => {
           </div>
           <div className="flex items-center space-x-2">
             <img src={assets.email} alt="Mail" className="h-6 w-6" />
-            <span className="text-sm font-bold">robin@lovehome.com</span>
+            <span className="text-sm font-bold">hello@love-homes.com.au</span>
           </div>
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="sm:flex sm:items-center sm:space-x-2 hidden">
           <img
             src={assets.facebook}
             alt="Facebook"
