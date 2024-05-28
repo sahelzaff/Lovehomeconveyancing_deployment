@@ -28,9 +28,10 @@
 @media screen and (min-width: 1024px){
   .custom-transform {
     @apply transform;
-    transform: scale(3.5) translate(-19px, -75px) rotate(44deg);
+    transform: scale(3.5) translate(-41px, -70px) rotate(37deg);
   }
 }
+
 
 
   /* .custom-select {
@@ -38,18 +39,20 @@
   } */
   
   .custom-arrow svg {
-    height: 1.5rem; /* Increase the size of the arrow */
+    height: 1.5rem; 
     width: 1.5rem;
-    fill: white; /* Make the arrow white */
+    fill: white; 
   }
 
   #left_full{
+    display: none;
     margin-left:-105px;
     right:35rem;
     border-radius:50px;
     padding-top:3rem;
   }
   #left_half{
+    display: none;
     margin-left:-105px;
     right:55rem;
     border-radius:50px;
@@ -72,3 +75,8 @@
     top: 4px;
 
   }
+
+  .button-svg-hover:hover svg {
+    transform: translateX(5px);
+    transition: transform 0.3s ease-in-out;
+}

@@ -3,6 +3,7 @@ import logoWhite from './logoWhite.webp';
 import logo_2 from './logo_2.webp';
 import logoMobile from './logoMobile.webp';
 import logo_white from './logo_white.webp';
+import logoBlackRed from './logoBlackRed.webp';
 import phone_call from './phone_call.svg';
 import email from './email.svg';
 import magnifier from './magnifier.png';
@@ -11,6 +12,7 @@ import insta from './insta.png';
 import facebook from './facebook.png';
 import twitter from './twitter.png';
 import linkedin from './linkedin.png';
+import wave from './wave.svg';
 
 
 export const assets = {
@@ -27,5 +29,7 @@ export const assets = {
     facebook,
     twitter,
     linkedin,
+    wave,
+    logoBlackRed,
 
 };

@@ -4,7 +4,7 @@ import './TopBar.css';
 
 const TopBar = () => {
   return (
-    <div className="bg-white text-black py-2">
+    <div className="bg-[#f0532d] text-black py-2">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4">
         <div className="flex items-center space-x-8">
           <div className="flex items-center space-x-2">

@@ -19,6 +19,8 @@ export default {
         roboto: ['Roboto', 'sans-serif'],
         sourceSans: ['Source Sans Pro', 'sans-serif'],
         openSans: ['Open Sans', 'sans-serif'],
+        foundersGrotesk: ['FoundersGrotesk', 'sans-serif'],
+        gotham: ['gotham', 'Lora'],
       },
     },
   },
