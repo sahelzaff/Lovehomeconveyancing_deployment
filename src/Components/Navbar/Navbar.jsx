@@ -24,7 +24,7 @@ const Navbar = () => {
     return (
         <div className="w-full z-10 sticky-navbar">
             <TopBar />
-            <nav className="bg-[#fffff] dark:bg-gray-900 w-full z-20 top-9 left-0 ">
+            <nav className="bg-transparent dark:bg-gray-900 w-full z-20 top-9 left-0 ">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <img

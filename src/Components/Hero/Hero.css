@@ -18,6 +18,7 @@
     fill: #000000;
 }
 
+
 @media screen and (min-width: 1280px){
   .custom-transform {
     @apply transform;
@@ -79,4 +80,28 @@
   .button-svg-hover:hover svg {
     transform: translateX(5px);
     transition: transform 0.3s ease-in-out;
+}
+
+/* Hero.css */
+
+@media (max-width: 768px){
+  #magnifierTransform{
+    transform: scale(3.5) translate(6px, -31px) rotate(37deg);
+    z-index: 1;
+  }
+}
+
+
+/* For medium screens */
+@media (max-width: 768px) {
+  #wave {
+    transform: translate(-106px, -65px) rotate(8deg) scaleX(-1) scale(2.3)  !important
+  }
+}
+
+/* For larger screens */
+@media (min-width: 769px) {
+  #wave {
+    transform: translate(-5px, 87px) rotate(-8deg) scale(1.1) scaleX(-1)  !important;
+  }
 }
