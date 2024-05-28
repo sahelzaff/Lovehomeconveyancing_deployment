@@ -64,7 +64,7 @@ const Hero = () => {
   return (
     <div className="relative w-full h-screen bg-cover bg-center overflow-hidden" style={{ backgroundImage: `url(${assets.background})` }}>
       <div className="absolute inset-0 flex flex-col items-center md:items-start justify-center text-white  md:px-4 pb-20 z-40 xl:pt-28 max-w-screen-xl mx-auto">
-        <h1 className="text-7xl -tracking-wide pt-72 md:tracking-normal md:pt-6 md:text-[5.1rem] font-bold text-center  md:text-left font-gotham w-full">
+        <h1 className="text-7xl -tracking-wide pt-56 md:tracking-normal md:pt-6 md:text-[5.1rem] font-bold text-center  md:text-left font-gotham w-full">
           Simplify Your Move.
         </h1>
         <div className='relative w-full mt-4'>
@@ -72,8 +72,8 @@ const Hero = () => {
             Get a Tailored Conveyancing Quote in Minutes!
           </p>
         </div>
-        <div className='relative w-full pt-36 px-4 md:mt-1'>
-          <p className="text-xl text-white  md:text-2xl md:pt-3 text-left font-poppins w-full md:w-auto font-medium md:text-[#0d0d0d]">Property <span className=''>Conveyancing</span> </p>
+        <div className='relative w-full pt-64 px-4 md:pt-24'>
+          <p className="text-xl text-[#0d0d0d]  md:text-2xl md:pt-3 text-left font-poppins w-full md:w-auto font-medium md:text-[#0d0d0d]">Property <span className=''>Conveyancing</span> </p>
         </div>
 
         <div className="flex flex-col md:flex-row items-center pt-4 space-y-4 md:space-y-0 md:space-x-4 w-full">

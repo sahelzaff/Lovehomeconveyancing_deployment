@@ -86,7 +86,7 @@
 
 @media (max-width: 768px){
   #magnifierTransform{
-    transform: scale(3.5) translate(6px, -31px) rotate(37deg);
+    transform: scale(4.5) translate(8px, -60px) rotate(37deg);
     z-index: 1;
   }
 }
