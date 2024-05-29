@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { assets } from '../../assets/assets';
 import TopBar from '../TopBar/TopBar';
+import './Navbar.css';
 
 const Navbar = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -30,6 +31,7 @@ const Navbar = () => {
                         <img
                             src={isMobile ? assets.logoMobile : assets.logoBlackRed}
                             className="h-14"
+                            id='logo'
                             alt="Love Home Logo"
                         />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>

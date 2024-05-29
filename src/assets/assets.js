@@ -3,6 +3,7 @@ import logoWhite from './logoWhite.webp';
 import logo_2 from './logo_2.webp';
 import logoMobile from './logoMobile.webp';
 import logo_white from './logo_white.webp';
+import banner from './banner.webp';
 import logoBlackRed from './logoBlackRed.webp';
 import phone_call from './phone_call.svg';
 import email from './email.svg';
@@ -35,5 +36,6 @@ export const assets = {
     logoBlackRed,
     RCProfile,
     Bars,
+    banner,
 
 };
