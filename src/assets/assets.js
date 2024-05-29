@@ -13,6 +13,8 @@ import facebook from './facebook.png';
 import twitter from './twitter.png';
 import linkedin from './linkedin.png';
 import wave from './wave.svg';
+import Bars from './Bars.svg';
+import RCProfile from './RCProfile.png';
 
 
 export const assets = {
@@ -31,5 +33,7 @@ export const assets = {
     linkedin,
     wave,
     logoBlackRed,
+    RCProfile,
+    Bars,
 
 };

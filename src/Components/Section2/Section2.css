@@ -1,0 +1,7 @@
+#bars{
+    transform: translate(-39px, 332px) scale(1);
+}
+
+#profile{
+    transform: translate(109px, 159px) scale(1.63) scaleX(-1);
+}
