@@ -239,3 +239,58 @@ i {
 		transform: translateY(0);
 	}
 }
+
+
+.wrapper{
+  box-sizing: content-box;
+  /* background-color: #ffffff; */
+  height: 110px;
+  padding: 8px 27px;
+  font-weight: 700;
+  /* font-family: sourceSans; */
+  display: flex;
+  border-radius: 8px;
+  font-size: 5.0rem;
+  /* box-shadow: 0 20px 25px rgba(0,0,0,0.2); */
+}
+.words{
+  overflow: hidden;
+  padding-left: 0.8rem;
+}
+#rotate{
+  display: block;
+  height: 100%;
+  background: linear-gradient(113deg, rgba(168,33,0,1) 0%, rgba(240,83,45,1) 50%, rgba(176,34,0,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 900;
+  animation: spin_words 12s infinite;
+}
+@keyframes spin_words{
+  10%{
+      transform: translateY(-112%);
+  }
+  25%{
+      transform: translateY(-100%);
+  }
+  35%{
+      transform: translateY(-212%);
+  }
+  50%{
+      transform: translateY(-200%);
+  }
+  60%{
+      transform: translateY(-312%);
+  }
+  75%{
+      transform: translateY(-300%);
+  }
+  85%{
+      transform: translateY(-412%);
+  }
+  100%{
+      transform: translateY(-400%);
+  }
+}

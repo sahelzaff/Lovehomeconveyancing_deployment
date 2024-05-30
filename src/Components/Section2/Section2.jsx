@@ -9,8 +9,9 @@ const Section2 = () => {
         <div className="flex flex-col space-y-4">
           <div className="flex items-center space-x-2">
             <div className='flex items-center space-x-2'>
-              <h2 className='text-4xl font-extrabold font-outfit md:pt-8'>
-                Legal Pitfalls to Avoid When Purchasing Property: <span className='text-4xl font-outfit font-bold' id='spancolor-text'>Expert Advice for Peace of Mind</span>
+              <h2 className='text-4xl font-extrabold  font-outfit md:pt-8'>
+                Legal Pitfalls to Avoid When <span className='text-6xl' id='spancolor-text' >Purchasing Property:</span>
+                <p className='text-3xl font-outfit pt-1 font-bold'>Expert Advice for Peace of Mind</p>
               </h2>
             </div>
           </div>

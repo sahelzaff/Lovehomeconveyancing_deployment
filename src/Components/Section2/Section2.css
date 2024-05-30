@@ -3,7 +3,7 @@
 }
 
 #profile {
-    transform: translate(51px, 47px) scale(1.83) scaleX(-1);
+    transform: translate(61px, 43px) scale(1.83) scaleX(-1);
 }
 
 #gray-background {
@@ -11,11 +11,11 @@
     height: 344px;
     transform: translate(69px, -15.5px) scale(1.83) scaleX(-1);
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(173,173,191,1) 52%, rgba(132,134,134,1) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(171,167,165,1) 100%);
 }
 
 #spancolor-text{
-    background: linear-gradient(113deg, rgba(241,85,85,1) 0%, rgba(240,93,87,1) 0%, rgba(189,43,38,1) 39%, rgba(218,43,0,1) 74%, rgba(219,82,48,1) 100%);
+    background: linear-gradient(113deg, rgba(168,33,0,1) 0%, rgba(240,83,45,1) 50%, rgba(176,34,0,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

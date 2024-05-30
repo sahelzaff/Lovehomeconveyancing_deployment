@@ -63,10 +63,22 @@ const Hero = () => {
 
   return (
     <div className="relative w-full h-screen bg-cover bg-center overflow-hidden" style={{ backgroundImage: `url(${assets.background})` }}>
-      <div className="absolute inset-0 flex flex-col items-center md:items-start justify-center text-white  md:px-4 pb-20 z-40 xl:pt-28 max-w-screen-xl mx-auto">
-        <h1 className="text-7xl -tracking-wide pt-56 md:tracking-normal md:pt-6 md:text-[5.1rem] font-bold text-center  md:text-left font-gotham w-full" id='animation'>
-          Simplify Your Move.
-        </h1>
+      <div className="absolute inset-0 flex flex-col items-center md:items-start justify-center text-white  md:px-0 pb-20 z-40 xl:pt-28 max-w-screen-xl mx-auto">
+        <div className="flex flex-col space-y-4">
+          <div class="wrapper font-outfit" >
+            <p className=''>Simply Your</p>
+            <div class="words">
+              <span id='rotate'></span>
+              <span id='rotate'>Move</span>
+              <span id='rotate'>Search</span>
+              <span id='rotate'>Lifestyle</span>
+              <span id='rotate'>Stress</span>
+
+            </div>
+          </div>
+        </div>
+
+
         <div className='relative w-full mt-4'>
           <p className="text-xs text-[#FFFFFF] text md:text-2xl pt-4 md:px-6 md:pt-6 text-center md:text-start tracking-widest font-poppins font-bold md:text-white w-full md:w-auto">
             Get a Tailored Conveyancing Quote in Minutes!
