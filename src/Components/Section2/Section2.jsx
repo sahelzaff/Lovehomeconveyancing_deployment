@@ -5,7 +5,7 @@ import './Section2.css';
 const Section2 = () => {
   return (
     <div className="flex h-screen">
-      <div className="w-full md:w-1/2 bg-white p-6 flex flex-col justify-start">
+      <div className="w-full md:w-1/2 bg-transparent p-6 flex flex-col justify-start">
         <div className="flex flex-col space-y-4">
           <div className="flex items-center space-x-2">
             <div className='flex items-center space-x-2'>
