@@ -39,7 +39,7 @@ const Navbar = () => {
                     <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                         <button
                             type="button"
-                            className="text-[#0d0d0d] bg-transparent hover: focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-sm px-4 py-3 text-center dark:bg-[#F57B1F] dark:hover:bg-[#F57B1F] dark:focus:ring-blue-800 border border-4 border-[#f0532d] font-roboto"
+                            className="text-[#0d0d0d] bg-transparent  font-bold rounded-lg text-sm px-4 py-3 text-center dark:bg-[#F57B1F] dark:hover:bg-[#F57B1F]  font-roboto" id='border'
                         >
                             Call Now +02 9381 9118
                         </button>

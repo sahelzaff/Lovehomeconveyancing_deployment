@@ -13,3 +13,12 @@
 		transform: scale(1);
 	}
 }
+
+#border{
+	border: 2px solid #f0532d;
+}
+
+#border:hover{
+	transform: scale(1.1);
+	transition: 0.5s ease-in-out;
+}

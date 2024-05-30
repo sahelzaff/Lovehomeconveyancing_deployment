@@ -21,16 +21,16 @@ const Section2 = () => {
             </p>
           </div>
 
-          <div className='md:pt-4'>
+          {/* <div className='md:pt-4'>
             <h2 className='font-outfit text-2xl font-semibold'>Mr Robin Carter-</h2>
             <p className='font-poppins md:pt-3 text-xl pr-10'>Principal Solicitor at Love Homes Conveyancing | 25 years of combined experience in accounting, law and business</p>
-          </div>
-          <div className="pt-7">
-            <a href="#" className="button">Let's Chat</a>
+          </div> */}
+          <div className="pt-24">
+            <a href="#" className="button cursor-pointer">Let's Chat</a>
           </div>
         </div>
       </div>
-      <div className="relative w-full md:w-1/2 p-6 flex items-center justify-center">
+      <div className="relative w-full md:w-1/2 p-6 flex items-center justify-center overflow-hidden">
         <div className="relative w-full h-full flex items-center justify-center">
           <img
             src={assets.Bars}
@@ -45,6 +45,20 @@ const Section2 = () => {
             className="w-1/2 h-auto md:h-1/2 object-cover relative -z-20"
             id="profile"
           />
+        <div className="absolute circle bg-[#C04224] " id="circle">
+          <div className='absolute text-white text-center flex  flex-col items-center justify-center w-full h-full'>
+            <p className='text-5xl font-poppins font-bold'>25</p>
+            <p className='text-2xl font-poppins font-bold'>Years</p>
+          </div>
+        </div>
+          <div className="absolute box bg-[#C04224]" id="box">
+          <div className='absolute text-white text-center flex items-start pt-2 justify-center w-full h-full'>
+            <p className=' absolute text-[1.45rem] right-7 font-outfit font-semibold '>Mr Robin Carter-Principal Solicitor</p>
+            
+          </div>
+            
+          </div>
+       
         </div>
       </div>
     </div>

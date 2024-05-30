@@ -294,3 +294,7 @@ i {
       transform: translateY(-400%);
   }
 }
+
+#borderHero{
+  border: 3px solid #fff ;
+}
