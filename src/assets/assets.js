@@ -16,6 +16,9 @@ import linkedin from './linkedin.png';
 import wave from './wave.svg';
 import Bars from './Bars.svg';
 import RCProfile from './RCProfile.png';
+import Benefit1 from './Benefit1.png';
+import Benefit2 from './Benefit2.png';
+import Benefit3 from './Benefit3.png';
 
 
 export const assets = {
@@ -37,5 +40,8 @@ export const assets = {
     RCProfile,
     Bars,
     banner,
+    Benefit1,
+    Benefit2,
+    Benefit3,
 
 };
