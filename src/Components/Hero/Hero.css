@@ -314,21 +314,21 @@ i {
 /* For 1920x1200 */
 @media only screen and (max-width: 1920px) and (max-height: 1200px) {
  #top_1{
-  top: 7rem;
+  top: 3rem;
  }
 }
 
 /* For 1920x1080 */
 @media only screen and (max-width: 1920px) and (max-height: 1080px) {
   #top_1{
-  top: 7rem;
+  top: 3rem;
  }
 }
 
 /* For 1680x1050 */
 @media only screen and (max-width: 1680px) and (max-height: 1050px) {
   #top_1{
-    top: 7rem;
+    top: 3rem;
     left: 2rem;
    }
 }
@@ -336,7 +336,7 @@ i {
 /* For 1600x900 */
 @media only screen and (max-width: 1600px) and (max-height: 900px) {
   #top_1{
-    top: 4rem;
+    top: 3rem;
     left: 2rem;
    }
    #rotating_Text{
@@ -370,11 +370,11 @@ i {
 /* For 1366x768 */
 @media only screen and (max-width: 1366px) and (max-height: 768px) {
 
-  #magnifierTransform{
-    transform: scale(2.5) translate(13px, -95px) rotate(35deg) ;
-  }
+  
   #hero_main{
-    top: -5rem;
+    #top_2{
+      top: 10em;
+    }
   }
 }
 

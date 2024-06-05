@@ -26,11 +26,11 @@ const Navbar = () => {
         <div className="w-full z-10 ">
             <TopBar />
             <nav className="bg-transparent dark:bg-gray-900 w-full z-20 top-9 left-0 sticky " id='sticky'>
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <div className="max-w-screen-3xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <img
                             src={isMobile ? assets.logoMobile : assets.logoBlackRed}
-                            className="h-14"
+                            className="h-14 cursor-pointer"
                             id='logo'
                             alt="Love Home Logo"
                         />
@@ -39,9 +39,10 @@ const Navbar = () => {
                     <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                         <button
                             type="button"
-                            className="text-[#0d0d0d] bg-transparent  font-bold rounded-lg text-sm px-4 py-3 text-center dark:bg-[#F57B1F] dark:hover:bg-[#F57B1F]  font-roboto" id='border'
+                            className="text-[#0d0d0d] bg-transparent flex justify-center items-center gap-2 pl-2 font-bold rounded-lg text-lg  text-center dark:bg-[#F57B1F] dark:hover:bg-[#F57B1F]  font-roboto ml-3" id='border'
                         >
                             Call Now +02 9381 9118
+                            <span><img src={assets.call_svgrepo_com}  className='w-10' alt="" srcset="" /></span>
                         </button>
                         <button
                             onClick={toggleMenu}

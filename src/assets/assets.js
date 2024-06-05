@@ -19,6 +19,9 @@ import RCProfile from './RCProfile.png';
 import Benefit1 from './Benefit1.png';
 import Benefit2 from './Benefit2.png';
 import Benefit3 from './Benefit3.png';
+import Background_all from './Background_all.png';
+import call_svgrepo_com from './call_svgrepo_com.svg';
+import blob_rc from './blob_rc.png';
 
 
 export const assets = {
@@ -43,5 +46,8 @@ export const assets = {
     Benefit1,
     Benefit2,
     Benefit3,
+    Background_all,
+    call_svgrepo_com,
+    blob_rc,
 
 };

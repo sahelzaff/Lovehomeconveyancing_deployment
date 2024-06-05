@@ -130,6 +130,7 @@
 }
 
 
+
 /* Media Queries */
 
 /* For 1920x1200 */
@@ -182,7 +183,7 @@
   }
 
   #p-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-right: 5rem;
     letter-spacing: 3px;
     line-height: 50px;
@@ -192,7 +193,7 @@
   }
 
   #buttonsec {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -377,17 +378,17 @@
   }
 
   #expert {
-    font-size: 1.8rem;
+    font-size: 1.5em;
     padding-left: 0.2rem;
   }
 
   #spancolor-text {
-    font-size: 4rem;
+    font-size: 3.8rem;
   }
   #p-text {
     font-size: 1.7rem;
-    padding-right: 5rem;
-    letter-spacing: 3px;
+    padding-right: 3rem;
+    letter-spacing: 2px;
     line-height: 42px;
     padding-top: 1rem;
     padding-left: .2rem;

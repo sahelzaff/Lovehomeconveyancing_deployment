@@ -3,34 +3,37 @@ import { assets } from '../../assets/assets';
 import './BenefitsComponent.css';
 const BenefitsComponent = () => {
   return (
-    <div className="bg-[#1b1817] p-8 pt-20 ">
-      <div className="max-w-screen-xl mx-auto text-white flex flex-col justify-center items-center">
-        <h1 className="text-center text-7xl font-outfit font-bold mb-3 whitespace-nowrap">
+    <div className="bg-[#fff] p-8 pt-20 ">
+      <div className="max-w-screen-3xl mx-auto text-black flex flex-col justify-center items-center">
+        <h1 className="text-center text-5xl font-outfit font-bold mb-3 whitespace-nowrap">
           Experience The Benefits Simplified With Our Service
         </h1>
-        <p className="text-center mb-36 text-xl font-poppins">
+        <p className=" text-black text-center mb-24 text-xl font-poppins">
           At love home, we redefine conveyancing by prioritizing simplicity and convenience.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-          <div className="bg-white text-black p-6 rounded-lg shadow-lg w-4/5 mx-auto" id='shadow_box'>
-            <img src={assets.Benefit1}alt="Talent Shortage" className="w-full h-40 object-cover mx-auto rounded-t-lg" />
-            <h2 className="text-2xl font-semibold mt-4 text-center font-outfit">Talent Shortage</h2>
-            <p className="mt-2 text-xl text-center font-poppins leading-normal max-w-prose mx-auto">
-              Attracting and retaining top talent in a competitive job market is a constant challenge. HR must develop effective recruitment strategies.
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div className="bg-[#f0532d] text-white p-6 rounded-lg shadow-lg max-w-[25rem] mx-auto" id='shadow_box'>
+            <img src={assets.Benefit1}alt="Talent Shortage" className="w-full h-50 object-cover mx-auto rounded-lg" />
+            <h2 className="text-2xl font-semibold mt-10 text-center font-outfit">Seamless Digital Experience</h2>
+            <p className="mt-2 text-lg text-center font-poppins leading-normal max-w-prose mx-auto">
+            Experience the ease of digital convenience with transparent, 24/7 access to documents, updates, and messages. Whether you're at home or on the move, all content is seamlessly delivered to any mobile device, keeping you informed every step of the way.
+
             </p>
           </div>
-          <div className="bg-white text-black p-6 rounded-lg shadow-lg w-4/5 mx-auto" id='shadow_box'>
-            <img src={assets.Benefit2} alt="Competitive Market" className="w-full h-40 object-cover mx-auto rounded-t-lg" />
-            <h2 className="text-2xl font-semibold mt-4 text-center font-outfit">Competitive Market</h2>
-            <p className="mt-2 text-xl text-center font-poppins leading-normal max-w-prose mx-auto">
-              HR must work to eliminate biases in recruitment and promotion processes and foster a culture of equity and inclusion.
+          <div className="bg-[#f0532d] text-white p-6 rounded-lg shadow-lg max-w-[25rem] mx-auto" id='shadow_box'>
+            <img src={assets.Benefit2} alt="Competitive Market" className="w-full h-50 object-cover mx-auto rounded-lg" />
+            <h2 className="text-2xl font-semibold mt-10 text-center font-outfit">Stress-Free Communication</h2>
+            <p className="mt-2 text-lg text-center font-poppins leading-normal max-w-prose mx-auto">
+            Say goodbye to stress with our streamlined communication process. All correspondence is securely delivered to you, your agent, and your broker in one online space hosted by your dedicated solicitor. This means you can communicate directly with your qualified property lawyer, ensuring clarity and efficiency throughout the transaction.
             </p>
           </div>
-          <div className="bg-white text-black p-6 rounded-lg shadow-lg w-4/5 mx-auto" id='shadow_box'>
-            <img src={assets.Benefit3} alt="Skills Mismatch" className="w-full h-40 object-cover mx-auto rounded-t-lg" />
-            <h2 className="text-2xl font-semibold mt-4 text-center font-outfit">Skills Mismatch</h2>
-            <p className="mt-2 text-xl text-center font-poppins leading-normal max-w-prose mx-auto">
-              Candidates often lack the specific skills required for the niche industry, leading to longer onboarding times and decreased productivity.
+          <div className="bg-[#f0532d] text-white p-6 rounded-lg shadow-lg max-w-[25rem] mx-auto" id='shadow_box'>
+            <img src={assets.Benefit3} alt="Skills Mismatch" className="w-full h-50 object-cover mx-auto rounded-lg" />
+            <h2 className="text-2xl font-semibold mt-10 text-center font-outfit">Trusted and Proven</h2>
+            <p className="mt-2 text-lgl text-center font-poppins leading-normal max-w-prose mx-auto">
+            At the core of our service is trust and reliability. We prioritize our customers and handle property deals with ease, speed, and confidence, ensuring a smooth and successful experience every time.
+Discover the difference with love home, where conveyancing is made simple.
+
             </p>
           </div>
         </div>
