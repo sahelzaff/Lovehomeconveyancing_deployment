@@ -30,7 +30,7 @@ const BenefitsComponent = () => {
           <div className="bg-[#f0532d] text-white p-6 rounded-lg shadow-lg max-w-[25rem] mx-auto" id='shadow_box'>
             <img src={assets.Benefit3} alt="Skills Mismatch" className="w-full h-50 object-cover mx-auto rounded-lg" />
             <h2 className="text-2xl font-semibold mt-10 text-center font-outfit">Trusted and Proven</h2>
-            <p className="mt-2 text-lgl text-center font-poppins leading-normal max-w-prose mx-auto">
+            <p className="mt-2 text-lg text-center font-poppins leading-normal max-w-prose mx-auto">
             At the core of our service is trust and reliability. We prioritize our customers and handle property deals with ease, speed, and confidence, ensuring a smooth and successful experience every time.
 Discover the difference with love home, where conveyancing is made simple.
 

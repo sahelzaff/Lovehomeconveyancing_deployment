@@ -22,6 +22,17 @@ import Benefit3 from './Benefit3.png';
 import Background_all from './Background_all.png';
 import call_svgrepo_com from './call_svgrepo_com.svg';
 import blob_rc from './blob_rc.png';
+import profile_1 from './profile_1.svg'
+import star from './star.svg'
+import rc_w_text from './rc_w_text.png';
+import reviewBackground from './reviewBackground.png';
+import Engagement from './Engagement.png';
+import Documentation from './Documentation.png';
+import Financial from './Financial.png';
+import PropertyCheck from './PropertyCheck.png';
+import Settlement from './Settlement.png';
+import house_Work1 from './house_Work1.png';
+
 
 
 export const assets = {
@@ -49,5 +60,14 @@ export const assets = {
     Background_all,
     call_svgrepo_com,
     blob_rc,
-
+    rc_w_text,
+    profile_1,
+    star,
+    reviewBackground,
+    house_Work1,
+    Engagement,
+    Documentation,
+    Financial,
+    PropertyCheck,
+    Settlement,
 };

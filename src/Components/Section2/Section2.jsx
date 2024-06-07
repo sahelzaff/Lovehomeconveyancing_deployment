@@ -37,7 +37,7 @@ const Section2 = () => {
       </div>
       <div className="relative w-full md:w-1/2 p-6 flex items-center justify-center overflow-hidden">
         <div>
-          <img src={assets.blob_rc} className='w-[50rem]' alt="" srcset="" loading='lazy' />
+          <img src={assets.rc_w_text} className='w-[50rem]' alt="" srcset="" loading='lazy' />
         </div>
       </div>
     </div>
