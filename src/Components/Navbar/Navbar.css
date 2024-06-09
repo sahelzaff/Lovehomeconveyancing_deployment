@@ -48,3 +48,14 @@ nav.scroll-active {
     background-color: #333; /* or any color for sticky state */
     transition: background-color 0.3s ease;
 }
+
+/* Navbar.css */
+.navbar {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .navbar-show {
+    opacity: 1;
+  }
+  

@@ -10,15 +10,15 @@ const GLOBE_CONFIG = {
   onRender: () => { },
   devicePixelRatio: 2,
   phi: 0,
-  theta: 0.3,
+  theta: 0.2,
   dark: 0,
   diffuse: 0.4,
-  mapSamples: 16000,
+  mapSamples: 18000,
   mapBrightness: 1.2,
   baseColor: [250 / 255, 105 / 255, 69 / 255],
   markerColor: [1, 1, 1],  
   glowColor: [0.99, 0.705, 0.635],
-  dotColor: [1, 1, 1],  // Add this line to set the color to white
+  dotColor: [0, 0, 0],  // Add this line to set the color to white
   markers: [
     { location: [14.5995, 120.9842], size: 0.03 },
     { location: [19.076, 72.8777], size: 0.1 },
@@ -94,7 +94,7 @@ const Globe = ({ className, config = GLOBE_CONFIG }) => {
   }, [config, onRender]);
 
   return (
-    <div className={cn("relative mx-auto aspect-[1/1] w-full max-w-[600px]", className)}>
+    <div className={cn("relative mx-auto aspect-[1/1] w-full max-w-screen-2xl", className)}>
       <canvas
         className={cn("h-full w-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size] ml-16")}
         ref={canvasRef}

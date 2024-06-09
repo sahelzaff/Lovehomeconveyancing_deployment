@@ -16,7 +16,7 @@ const CustomSelect = ({ options, placeholder }) => {
   return (
     <div className="relative z-50 custom-select-container" style={{ marginRight: '100px' }}>
     <div
-      className="relative w-full py-4 text-center bg-[rgb(248,248,255)] text-black font-montserrat font-bold border-2 border-[white] rounded leading-tight custom-select cursor-pointer"
+      className="relative w-full py-4 text-center bg-[rgb(248,248,255)] text-black font-montserrat font-bold border-2 border-[#f0532d] rounded leading-tight custom-select cursor-pointer"
       onClick={toggleDropdown}
       style={{ width: '300px'}}
     >
@@ -35,7 +35,7 @@ const CustomSelect = ({ options, placeholder }) => {
       </div>
     </div>
     {isOpen && (
-      <ul className="absolute z-50 w-full bg-white text-black border border-white rounded mt-1 bottom-full mb-5 menu open" style={{ width: '300px' }}>
+      <ul className="absolute z-50 w-full bg-white text-black border border-[white] rounded mt-1 bottom-full mb-5 menu open" style={{ width: '300px' }}>
         {options.map((option) => (
           <li
             key={option}
@@ -92,7 +92,7 @@ const Hero = () => {
         </div>
         <div className='relative w-full 2xl:top-[3rem]' id='top_1'>
         <div className='relative w-full pt-64 md:pt-24 2xl:pt-48 '>
-          <p className="text-xl text-[#0d0d0d] 2xl:text-4xl md:text-2xl md:pt-3 text-left font-poppins w-full md:w-auto font-medium md:text-[#0d0d0d]">Property <span className=''>Conveyancing</span> </p>
+          <p className="text-xl text-[#f02] 2xl:text-4xl md:text-2xl md:pt-3 text-left font-poppins w-full md:w-auto font-medium md:text-[#0d0d0d]">Property <span className='text-[#f0532d]'>Conveyancing</span> </p>
         </div>
 
         <div className="flex flex-col md:flex-row items-center pt-4 space-y-4 md:space-y-0 md:space-x-4 w-full">

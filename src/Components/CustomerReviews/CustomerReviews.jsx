@@ -20,7 +20,7 @@ const CustomerReviews = () => {
   return (
     <div className='h-screen my-36'>
       <div className='flex flex-row'>
-        <div className='w-1/2'>
+        <div className='w-1/2 relative -z-0'>
           <div className='flex flex-col h-screen justify-center items-center'>
             <div className="flex w-3/4 justify-start items-start flex-col ">
             <div>
@@ -52,7 +52,7 @@ const CustomerReviews = () => {
             </Slider>
           </div>
         </div>
-        <div className='w-1/2 bg-cover bg-center overflow-hidden' style={{ backgroundImage: `url(${assets.reviewBackground})` }}>
+        <div className='w-1/2 relative z-10 bg-cover bg-center overflow-hidden' style={{ backgroundImage: `url(${assets.reviewBackground})` }}>
                 <div className='flex justify-center items-center'>
           <Globe/>
           </div>

@@ -3,7 +3,7 @@ import { assets } from '../../assets/assets'
 
 const WorkSection = () => {
     return (
-        <div className='h-auto flex flex-col mb-36'>
+        <div className='h-auto flex flex-col '>
             <div className=' flex flex-row justify-between items-center px-8 '>
                 <div>
                     <p className='font-outfit text-2xl text-[#1B1817] mb-1'>How does it work?</p>
@@ -15,13 +15,13 @@ const WorkSection = () => {
                     <img src={assets.house_Work1} alt="" srcset="" />
                 </div>
             </div>
-            <div className='grid grid-cols-2 grid-rows-3 gap-10 px-4'>
+            <div className='grid grid-cols-2 grid-rows-3 gap-10 px-20'>
                 <div className='flex flex-row gap-2 '>
                     <div>
                         <img src={assets.Engagement} className='w-[54rem]' alt="" srcset="" />
                     </div>
-                    <div>
-                        <h2 className='font-outfit text-2xl pt-6 pb-2'>Engagement</h2>
+                    <div className='flex flex-col items-start'>
+                        <h2 className='font-outfit text-2xl pt-6 pb-2 '>Engagement</h2>
                         <p className='font-poppins text-sm'> This initial step involves selecting and appointing a professional who is proficient in handling property transactions through digital platforms. The conveyancer or solicitor will explain the process, answer any initial questions, and begin gathering essential information. They will also provide a clear outline of the services they will offer, ensuring that the customer understands what to expect throughout the transaction. This engagement sets the foundation for a smooth and efficient conveyancing </p>
                     </div>
                 </div>

@@ -2,10 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { assets } from '../../assets/assets';
 import TopBar from '../TopBar/TopBar';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
+
+
 
 const Navbar = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+
+    const handleLogoClick = () => {
+        window.location.href = 'src\Homepage.jsx';
+    };
+
 
     useEffect(() => {
         const handleResize = () => {
@@ -23,9 +31,9 @@ const Navbar = () => {
     };
 
     return (
-        <div className="w-full z-10 ">
+        <div className="sticky w-full z-50 ">
             <TopBar />
-            <nav className="bg-transparent dark:bg-gray-900 w-full z-20 top-9 left-0 sticky " id='sticky'>
+            <nav className="bg-white dark:bg-gray-900 w-full z-20 top-9 left-0 sticky " id='sticky'>
                 <div className="max-w-screen-3xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <img
@@ -33,6 +41,8 @@ const Navbar = () => {
                             className="h-14 cursor-pointer"
                             id='logo'
                             alt="Love Home Logo"
+                            onClick={handleLogoClick}
+                            
                         />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
                     </a>
@@ -66,21 +76,22 @@ const Navbar = () => {
                     <div className={`items-center justify-between ${menuOpen ? 'block' : 'hidden'} w-full md:flex md:w-auto md:order-1`} id="navbar-sticky">
                         <ul className="flex flex-col pl-24 md:flex-row md:space-x-8 md:mt-0 md:border-0">
                             <li>
-                                <a
-                                    href="#"
+                                <Link
+                                    href="./Homepage.jsx"
                                     className="block py-2 px-3 text-[#f0532d] rounded md:bg-transparent md:text--[#0d0d0d] md:p-0  cursor-pointer md:dark:text-[#F57B1F] font-bold font-montserrat"
                                     aria-current="page"
+                                    to="/"
                                 >
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     href="#"
                                     className="block py-2 px-3 text-[#0d0d0d] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#f0532d] md:p-0 md:dark:hover:text-white dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold font-montserrat cursor-pointer "
                                 >
                                     Process
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <a
@@ -107,12 +118,13 @@ const Navbar = () => {
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href="#"
+                                <Link
+                                    href=""
                                     className="block py-2 px-3 text-[#0d0d0d] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#f0532d] md:p-0 md:dark:hover:text-white dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold font-montserrat cursor-pointer"
+                                    to="/contact"
                                 >
                                     Contact Us
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

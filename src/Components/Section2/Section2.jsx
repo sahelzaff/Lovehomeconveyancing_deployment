@@ -4,7 +4,7 @@ import './Section2.css';
 
 const Section2 = () => {
   return (
-    <div className="flex h-screen mt-20 mb-56">
+    <div className="flex h-auto pt-20 pb-32 bg-[#F4F4F4]">
       <div className="w-full md:w-1/2 bg-transparent p-6 flex flex-col justify-start 2xl:p-12">
         <div className="flex flex-col space-y-4">
           <div className=" items-center space-x-2" id='text-div'>
@@ -27,7 +27,7 @@ const Section2 = () => {
             <p className='font-poppins md:pt-3 text-xl pr-10'>Principal Solicitor at Love Homes Conveyancing | 25 years of combined experience in accounting, law and business</p>
           </div> */}
 
-          <div className='pt-5'>
+          <div className='pt-20'>
             <a href="" className='text-xl font-poppins font-medium hover:text-[#f0532d] cursor-pointer' id='border_bottom'>My Stories</a>
           </div>
           <div className="pt-10">

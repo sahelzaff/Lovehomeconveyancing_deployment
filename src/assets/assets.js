@@ -5,6 +5,7 @@ import logoMobile from './logoMobile.webp';
 import logo_white from './logo_white.webp';
 import banner from './banner.webp';
 import logoBlackRed from './logoBlackRed.webp';
+import faq from './faq.png';
 import phone_call from './phone_call.svg';
 import email from './email.svg';
 import magnifier from './magnifier.png';
@@ -32,10 +33,24 @@ import Financial from './Financial.png';
 import PropertyCheck from './PropertyCheck.png';
 import Settlement from './Settlement.png';
 import house_Work1 from './house_Work1.png';
+import why from './why.png';
+import services from './services.png';
+import buying from './buying.png';
+import selling from './selling.png';
+import transfer from './transfer.png';
+import investor from './investor.png';
+import clock_contact from './clock_contact.svg';
+import mail from './mail.svg';
+import telephone from './telephone.svg';
+import location from './location.svg';
 
 
 
 export const assets = {
+    clock_contact,
+    mail,
+    telephone,
+    location,
     logo,
     logoMobile,
     logo_white,
@@ -70,4 +85,11 @@ export const assets = {
     Financial,
     PropertyCheck,
     Settlement,
+    why,
+    services,
+    buying,
+    selling,
+    investor,
+    transfer,
+    faq,
 };
