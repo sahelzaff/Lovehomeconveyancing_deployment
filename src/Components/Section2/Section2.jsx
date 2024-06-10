@@ -11,9 +11,9 @@ const Section2 = () => {
             <div className=' flex flex-col items-start .space-x-2'>
               <p className='text-4xl font-bold  font-outfit md:pt-8' id='legal'>
                 Legal Pitfalls to Avoid When </p>
-                <h2 className='text-7xl font-extrabold font-outfit py-2' id='spancolor-text' >Purchasing Property:</h2>
-                <p className='text-4xl font-outfit  font-bold tracking-[.5rem]' id='expert'>Expert Advice for Peace of Mind</p>
-             
+              <h2 className='text-7xl font-extrabold font-outfit py-2' id='spancolor-text' >Purchasing Property:</h2>
+              <p className='text-4xl font-outfit  font-bold tracking-[.5rem]' id='expert'>Expert Advice for Peace of Mind</p>
+
             </div>
           </div>
           <div className='md:pt-2 font-poppins text-sm'>
@@ -35,9 +35,9 @@ const Section2 = () => {
           </div>
         </div>
       </div>
-      <div className="relative w-full md:w-1/2 p-6 flex items-center justify-center overflow-hidden">
-        <div>
-          <img src={assets.rc_w_text} className='w-[50rem]' alt="" srcset="" loading='lazy' />
+      <div className="w-full md:w-1/2 p-6 overflow-hidden flex justify-end items-center">
+        <div className='relative'>
+          <img src={assets.rc_w_text} className='w-[50rem] max-w-full' alt="" loading='lazy' />
         </div>
       </div>
     </div>

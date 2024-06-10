@@ -25,16 +25,16 @@ const services = [
 ];
 
 const ServiceCard = ({ title, image, description }) => (
-    <div className="relative group w-full sm:w-1/2 md:w-1/4 p-4 bg-[#f4f4f4] pb-20">
-         <div className="h-[60vh] bg-gray-100 rounded-lg overflow-hidden shadow-lg flex flex-col justify-center items-center transition-transform transform hover:scale-105 cursor-pointer shadow-2xl hover:shadow-3xl border border-transparent hover:border-gray-400">
+    <div className="relative group w-full sm:w-1/2 md:w-[25%] p-4 bg-[#f4f4f4] pb-20 ">
+         <div className="h-[60vh] bg-gray-100 rounded-lg overflow-hidden shadow-lg flex flex-col justify-center items-center transition-transform transform hover:scale-105 cursor-pointer shadow-2xl hover:shadow-3xl border border-transparent hover:border-gray-400 pb-10">
 
             <img
                 src={image}
                 alt={title}
                 className="w-64 h-auto object-cover p-10 mb-10 "
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 px-4 group-hover:h-32 transition-all duration-300 ease-in-out h-16 pb-10">
-                <h3 className="text-xl font-bold font-outfit">{title}</h3>
+            <div className="absolute bottom-0 left-0 right-0 bg-[#f0532d] bg-opacity-90 px-4 group-hover:h-[9rem] transition-all duration-300 ease-in-out h-16 pb-10 ">
+                <h3 className="text-xl font-bold font-outfit mt-2">{title}</h3>
                 <p className="mt-1 text-sm text-gray-700 hidden group-hover:block font-poppins font-medium tracking-tighter">
                     {description}
                 </p>

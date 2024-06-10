@@ -18,10 +18,10 @@ const CustomerReviews = () => {
   };
 
   return (
-    <div className='h-screen my-36'>
+    <div className='h-screen mb-36'>
       <div className='flex flex-row'>
-        <div className='w-1/2 relative -z-0'>
-          <div className='flex flex-col h-screen justify-center items-center'>
+        <div className='w-1/2 relative -z-0 pl-8'>
+          <div className='flex flex-col h-screen justify-center items-start'>
             <div className="flex w-3/4 justify-start items-start flex-col ">
             <div>
               <p className='font-outfit text-5xl font-bold text-[#1B1817]'>Customer Reviews</p>
@@ -53,8 +53,10 @@ const CustomerReviews = () => {
           </div>
         </div>
         <div className='w-1/2 relative z-10 bg-cover bg-center overflow-hidden' style={{ backgroundImage: `url(${assets.reviewBackground})` }}>
-                <div className='flex justify-center items-center'>
-          {/* <Globe/> */}
+                <div className='flex justify-end items-end'>
+          <Globe
+          className={'absolute -right-36'}
+          />
           </div>
                 
         </div>

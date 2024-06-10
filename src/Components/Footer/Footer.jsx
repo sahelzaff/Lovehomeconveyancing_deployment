@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets'
 const Footer = () => {
     return (
         <div className='pt-10 h-auto w-full'>
-            <div className='bg-[rgba(240,84,45,0.91)] text-[#fff] p-14'>
+            <div className='bg-[#19345ef1] text-[#fff] p-14'>
                 <p className='font-poppins font-medium text-[1rem]'>Financial Disclaimer: Please remember that past performance may not be indicative of future results. Different types of investments involve varying degrees of risk. Due to various factors, including changing market conditions, the content may no longer be reflective of current opinions or positions. Moreover, you should not assume that any discussion or information contained in this website serves as the receipt of, or as a substitute for, personalized investment advice from Borrower First. Please consult our financial experts for more information.</p>
 
             </div>

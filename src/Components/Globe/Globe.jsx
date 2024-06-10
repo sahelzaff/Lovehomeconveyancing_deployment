@@ -1,4 +1,3 @@
-// src/components/Globe.js
 import React, { useCallback, useEffect, useRef } from "react";
 import { useSpring } from "react-spring";
 import createGlobe from "cobe";
@@ -7,18 +6,17 @@ import { cn } from "../../lib/utils";
 const GLOBE_CONFIG = {
   width: 800,
   height: 800,
-  onRender: () => { },
+  onRender: () => {},
   devicePixelRatio: 2,
   phi: 0,
-  theta: 0.2,
+  theta: 0.3,
   dark: 0,
   diffuse: 0.4,
-  mapSamples: 18000,
+  mapSamples: 16000,
   mapBrightness: 1.2,
   baseColor: [250 / 255, 105 / 255, 69 / 255],
-  markerColor: [1, 1, 1],  
-  glowColor: [0.99, 0.705, 0.635],
-  dotColor: [0, 0, 0],  // Add this line to set the color to white
+  markerColor: [1, 1, 1],
+  glowColor: [1, 1, 1],
   markers: [
     { location: [14.5995, 120.9842], size: 0.03 },
     { location: [19.076, 72.8777], size: 0.1 },
@@ -33,7 +31,7 @@ const GLOBE_CONFIG = {
   ],
 };
 
-const Globe = ({ className, config = GLOBE_CONFIG }) => {
+export default function Globe({ className, config = GLOBE_CONFIG }) {
   let phi = 0;
   let width = 0;
   const canvasRef = useRef(null);
@@ -69,7 +67,7 @@ const Globe = ({ className, config = GLOBE_CONFIG }) => {
       state.width = width * 2;
       state.height = width * 2;
     },
-    [pointerInteracting, phi, r]
+    [pointerInteracting, phi, r],
   );
 
   const onResize = () => {
@@ -89,23 +87,37 @@ const Globe = ({ className, config = GLOBE_CONFIG }) => {
       onRender,
     });
 
-    setTimeout(() => (canvasRef.current.style.opacity = "1"));
-    return () => globe.destroy();
+    setTimeout(() => (canvasRef.current.style.opacity = "1"), 500);
+    return () => {
+      window.removeEventListener("resize", onResize);
+      globe.destroy();
+    };
   }, [config, onRender]);
 
   return (
-    <div className={cn("relative mx-auto aspect-[1/1] w-full max-w-screen-2xl", className)}>
+    <div
+      className={cn(
+        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
+        className,
+      )}
+    >
       <canvas
-        className={cn("h-full w-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size] ml-16")}
+        className={cn(
+          "h-full w-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]",
+        )}
         ref={canvasRef}
-        onPointerDown={(e) => updatePointerInteraction(e.clientX - pointerInteractionMovement.current)}
+        onPointerDown={(e) =>
+          updatePointerInteraction(
+            e.clientX - pointerInteractionMovement.current,
+          )
+        }
         onPointerUp={() => updatePointerInteraction(null)}
         onPointerOut={() => updatePointerInteraction(null)}
         onMouseMove={(e) => updateMovement(e.clientX)}
-        onTouchMove={(e) => e.touches[0] && updateMovement(e.touches[0].clientX)}
+        onTouchMove={(e) =>
+          e.touches[0] && updateMovement(e.touches[0].clientX)
+        }
       />
     </div>
   );
-};
-
-export default Globe;
+}

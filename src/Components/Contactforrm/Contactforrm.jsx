@@ -1,24 +1,61 @@
 import React, { useRef, useEffect, useState } from 'react';
+import axios from 'axios';
 import { assets } from '../../assets/assets';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Modal from 'react-modal';
 
-
-
 const Contactform = () => {
   const [isVerified, setIsVerified] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
+  const [error, setError] = useState('');
+
   const onRecaptchaChange = (value) => {
     if (value) {
       setIsVerified(true);
     }
   };
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsModalOpen(true);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!isVerified) {
+      setError('Please verify that you are a human.');
+      return;
+    }
+
+    try {
+      const response = await axios.post('http://localhost:5000/', formData);
+      if (response.status === 200) {
+        setIsModalOpen(true);
+        setFormData({
+          firstName: '',
+          lastName: '',
+          phone: '',
+          email: '',
+          message: ''
+        });
+        setIsVerified(false);
+      }
+    } catch (error) {
+      console.error('There was an error submitting the form:', error);
+      setError('There was an error submitting the form. Please try again.');
+    }
+  };
+
   const rightDivRef = useRef(null);
   const leftDivRef = useRef(null);
 
@@ -50,32 +87,75 @@ const Contactform = () => {
       </div>
 
       <div className="flex-grow container mx-auto p-4 flex h-auto">
-        <div className="w-3/4 overflow-y-auto h-auto bg-gray-100 p-4 no-scrollbar" ref={leftDivRef}>
-          <form className="w-full mx-auto px-10 pl-32 no-scrollbar h-auto">
+        <div className="w-3/4 overflow-y-auto h-auto bg-[#f4f4f4] p-4 no-scrollbar" ref={leftDivRef}>
+          <form className="w-full mx-auto px-10 pl-32 no-scrollbar h-auto bg-[#f4f4f4]" onSubmit={handleSubmit}>
             <div className="grid md:grid-cols-2 md:gap-6">
               <div className="relative z-0 w-full mb-10 group">
-                <input type="text" name="floating_first_name" id="floating_first_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#f0542dec] peer" placeholder=" " required />
-                <label htmlFor="floating_first_name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#000] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#f0542dec] peer"
+                  placeholder=" "
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                />
+                <label htmlFor="firstName" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#000] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
               </div>
               <div className="relative z-0 w-full mb-10 group">
-                <input type="text" name="floating_last_name" id="floating_last_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#f0542dec] peer" placeholder=" " required />
-                <label htmlFor="floating_last_name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#000] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#f0542dec] peer"
+                  placeholder=" "
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                />
+                <label htmlFor="lastName" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#000] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
               </div>
             </div>
             <div className="relative z-0 w-full mb-10 group">
-            <input type="tel" pattern="[0-9]{10}" name="floating_phone" id="floating_phone" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#f0542dec] peer" placeholder=" " required />
-
-              <label htmlFor="floating_phone" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#000] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (123-456-7890)</label>
+              <input
+                type="tel"
+                pattern="[0-9]{10}"
+                name="phone"
+                id="phone"
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#f0542dec] peer"
+                placeholder=" "
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+              <label htmlFor="phone" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#000] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (123-456-7890)</label>
             </div>
 
             <div className="relative z-0 w-full mb-10 group">
-              <input type="email" name="floating_email" id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#f0542dec] peer" placeholder=" " required />
-              <label htmlFor="floating_email" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-[#000] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-[#f0542dec] peer"
+                placeholder=" "
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <label htmlFor="email" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#000] peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
             </div>
 
             <div className="relative z-0 w-full mb-10 group">
-              <label htmlFor="large-input" className="block mb-2 text-sm font-bold text-gray-900 dark:text-white">How can we help?</label>
-              <input type="text" id="large-input" className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-[#f0542dec] focus:border-[#f0542dec] pb-32 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+              <label htmlFor="message" className="block mb-2 text-sm font-normal text-gray-500 dark:text-white">How can we help?</label>
+              <input
+                type="text"
+                id="message"
+                name="message"
+                className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-[#f0542dec] focus:border-[#f0542dec] pb-32 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                value={formData.message}
+                onChange={handleChange}
+              />
             </div>
 
             <ReCAPTCHA
@@ -84,7 +164,14 @@ const Contactform = () => {
               className='mb-5'
             />
 
-            <button type="submit" disabled={!isVerified} className="text-white font-poppins bg-[#f0532dec] hover:bg-orange-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg w-full sm:w-auto px-7 py-2.5 text-center dark:bg-[#f0532d] dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+            <button
+              type="submit"
+              disabled={!isVerified}
+              className="text-white font-poppins bg-[#f0532dec] hover:bg-orange-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg w-full sm:w-auto px-7 py-2.5 text-center dark:bg-[#f0532d] dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Submit
+            </button>
+            {error && <p className="text-red-500 mt-2">{error}</p>}
           </form>
 
           <Modal
@@ -95,9 +182,8 @@ const Contactform = () => {
             <h2>Thank you.. we'll get in touch soon</h2>
             <button onClick={() => setIsModalOpen(false)}>Close</button>
           </Modal>
-
         </div>
-        <div className="w-2/6 h-screen bg-gray-200 p-4 sticky top-0 overflow-x-hidden" ref={rightDivRef}>
+        <div className="w-2/6 h-screen bg-[#f4f4f4] p-4 sticky top-0 overflow-x-hidden" ref={rightDivRef}>
           <div className="flex flex-col items-start">
             <div className="flex flex-row items-start justify-start gap-5 w-96 mb-10">
               <div>

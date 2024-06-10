@@ -4,10 +4,10 @@ import { assets } from '../../assets/assets'
 const WorkSection = () => {
     return (
         <div className='h-auto flex flex-col '>
-            <div className=' flex flex-row justify-between items-center px-8 '>
+            <div className=' flex flex-row justify-between items-center px-4'>
                 <div>
                     <p className='font-outfit text-2xl text-[#1B1817] mb-1'>How does it work?</p>
-                    <p className='font-outfit text-3xl italic font-medium tracking-wider'>At LoveHome Conveyancing,</p>
+                    <p className='font-outfit text-2xl italic font-medium tracking-wider'>At LoveHome Conveyancing,</p>
                     <p className='font-outfit text-3xl italic font-medium tracking-wider'>We do exactly what we promise.</p>
                     <p className='font-outfit text-3xl italic font-medium tracking-wider'>We handle every detail with care.</p>
                 </div>

@@ -43,11 +43,13 @@ import clock_contact from './clock_contact.svg';
 import mail from './mail.svg';
 import telephone from './telephone.svg';
 import location from './location.svg';
+import contact from './contact.png';
 
 
 
 export const assets = {
     clock_contact,
+    contact,
     mail,
     telephone,
     location,

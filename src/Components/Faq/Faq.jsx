@@ -15,7 +15,7 @@ const Faq = () => {
 
     return (
         <div className='max-w-screen-4xl w-full h-auto pb-10'>
-            <div className='px-8 flex flex-col items-center justify-center h-auto'>
+            <div className='px-[5rem] flex flex-col items-center justify-center h-auto'>
                 <div className='flex flex-row items-center justify-center h-auto'>
                     <div className='flex flex-col items-start justify-center h-auto w-3/4 '>
                         <h2 className='font-outfit font-semibold text-5xl'>FAQ's</h2>
