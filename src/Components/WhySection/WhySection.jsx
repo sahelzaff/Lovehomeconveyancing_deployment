@@ -71,7 +71,7 @@ const WhySection = () => {
     };
 
     return (
-        <div className='bg-[#f4f4f4] w-full max-w-screen-2xl h-auto py-20'>
+        <div className='bg-[#f4f4f4] w-full max-w-screen-4xl h-auto py-20'>
             <div className='flex flex-col items-stretch justify-center gap-12 h-auto'>
                 <div className='flex flex-row items-center justify-center px-8'>
                     <div className='flex flex-col items-start justify-center w-full max-w-screen-2xl h-auto'>

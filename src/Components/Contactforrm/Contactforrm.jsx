@@ -42,7 +42,7 @@ const Contactform = () => {
   }, []);
 
   return (
-    <div className="h-auto w-full max-w-screen-2xl bg-[#f4f4f4] flex flex-col justify-center items-center py-20 px-2">
+    <div className="h-auto w-full max-w-screen-4xl bg-[#f4f4f4] flex flex-col justify-center items-center py-20 px-2">
       <div className="flex flex-col justify-center items-center mb-10">
         <h1 className="font-poppins font-medium text-xl">Let's Discuss</h1>
         <h2 className="font-outfit font-bold text-5xl">Whatever Question You Have,</h2>

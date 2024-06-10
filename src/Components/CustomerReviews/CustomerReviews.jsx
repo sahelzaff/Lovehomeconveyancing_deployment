@@ -54,12 +54,12 @@ const CustomerReviews = () => {
         </div>
         <div className='w-1/2 relative z-10 bg-cover bg-center overflow-hidden' style={{ backgroundImage: `url(${assets.reviewBackground})` }}>
                 <div className='flex justify-center items-center'>
-          <Globe/>
+          {/* <Globe/> */}
           </div>
                 
         </div>
       </div>
-    </div>
+    </div>  
   );
 }
 

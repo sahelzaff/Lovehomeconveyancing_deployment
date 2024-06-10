@@ -5,29 +5,29 @@ import './BenefitsComponent.css';
 const BenefitsComponent = () => {
   return (
     <div className="bg-[#F4F4F4] p-8 h-auto pb-36">
-      <div className="max-w-screen-3xl mx-auto text-black flex flex-col justify-center items-center">
-        <h1 className="text-center text-5xl font-outfit font-bold mb-3 whitespace-nowrap">
+      <div className="max-w-screen-4xl mx-auto text-black flex flex-col justify-center items-center">
+        <h1 className="text-center text-4xl 2xl:text-7xl md:text-[3.2rem] font-outfit font-bold mb-3 whitespace-nowrap">
           Experience The Benefits Simplified With Our Service
         </h1>
-        <p className="text-[#1B1817] text-center mb-24 text-xl font-poppins">
+        <p className="text-[#1B1817] text-center mb-24 text-xl font-poppins 2xl:text-2xl xl:text-xl">
           At love home, we redefine conveyancing by prioritizing simplicity and convenience.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <div className="card bg-[#f0532d] text-white p-6 rounded-lg shadow-lg max-w-[25rem] mx-auto cursor-">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-auto">
+          <div className="card bg-[#f0532d] text-white p-6 rounded-lg  shadow-lg w-[22rem] max-w-[25rem] mx-auto cursor-">
             <img src={assets.Benefit1} alt="Talent Shortage" className="w-full h-50 object-cover mx-auto rounded-lg" />
             <h2 className="text-2xl font-bold mt-10 text-center font-outfit text-[#1B1817]">Seamless Digital Experience</h2>
             <p className="mt-4 text-[1rem] text-center tracking-[-0.5px] font-poppins leading-normal max-w-prose mx-auto text-[#f4f4f4] font-medium">
               Experience the ease of digital convenience with transparent, 24/7 access to documents, updates, and messages. Whether you're at home or on the move, all content is seamlessly delivered to any mobile device, keeping you informed every step of the way.
             </p>
           </div>
-          <div className="card bg-[#f0532d] text-white p-6 rounded-lg shadow-lg max-w-[25rem] mx-auto cursor-">
+          <div className="card bg-[#f0532d] text-white p-6 rounded-lg shadow-lg w-[22rem] max-w-[25rem] mx-auto cursor-">
             <img src={assets.Benefit2} alt="Competitive Market" className="w-full h-50 object-cover mx-auto rounded-lg" />
             <h2 className="text-2xl font-bold mt-10 text-center font-outfit text-[#1B1817]">Stress-Free Communication</h2>
             <p className="mt-4 text-[1rem] text-center tracking-[-0.5px] font-poppins leading-normal max-w-prose mx-auto text-[#f4f4f4] font-medium">
               Say goodbye to stress with our streamlined communication process. All correspondence is securely delivered to you, your agent, and your broker in one online space hosted by your dedicated solicitor. This means you can communicate directly with your qualified property lawyer, ensuring clarity and efficiency throughout the transaction.
             </p>
           </div>
-          <div className="card bg-[#f0532d] text-white p-6 rounded-lg shadow-lg max-w-[25rem] mx-auto cursor-">
+          <div className="card bg-[#f0532d] text-white p-6 rounded-lg shadow-lg w-[22rem] max-w-[25rem] mx-auto cursor-">
             <img src={assets.Benefit3} alt="Skills Mismatch" className="w-full h-50 object-cover mx-auto rounded-lg" />
             <h2 className="text-2xl font-bold mt-10 text-center font-outfit text-[#1B1817]">Trusted and Proven</h2>
             <p className="mt-4 text-[1rem] text-center tracking-[-0.5px] font-poppins leading-normal max-w-prose mx-auto text-[#f4f4f4] font-medium">
